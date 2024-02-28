@@ -1,0 +1,16 @@
+server.port=8086
+kafka.topic =bets
+
+# Required connection configs for Kafka producer, consumer, and admin
+spring.kafka.properties.sasl.mechanism=PLAIN
+spring.kafka.properties.bootstrap.servers=pkc-xxx.eu-north-1.aws.confluent.cloud:9092
+spring.kafka.properties.sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username='6IJSJXEZxxx' password='Fvfu4YcYhPJbULws0UsBQxxxxx';
+spring.kafka.properties.security.protocol=SASL_SSL
+
+# Best practice for higher availability in Apache Kafka clients prior to 3.0
+spring.kafka.properties.session.timeout.ms=45000
+
+spring.kafka.bootstrap-servers=pkc-xxx.eu-north-1.aws.confluent.cloud:9092
+spring.kafka.sasl.mechanism=PLAIN
+spring.kafka.sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username='6IJSJXEZLxxx' password='Fvfu4YcYhPJbULws0UsBQzBKxxxxx';
+spring.kafka.security.protocol=SASL_SSL

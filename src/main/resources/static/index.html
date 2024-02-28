@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kafka test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <script src="webjars/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+    <script src="webjars/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="container-fluid p-5 bg-primary text-white text-center">
+    <h1>Kafka-confluent test</h1>
+</div>
+<div class="container mt-5">
+
+    <div class="row">
+        <div class="col">
+            <div class="row">
+                <p>Sent a message via producer</p>
+            </div>
+            <form id="producer">
+                <div class="form-group">
+                    <label for="key">Key</label>
+                    <input type="text" class="form-control" id="key" aria-describedby="keyHelp" placeholder="Enter key">
+                    <small id="keyHelp" class="form-text text-muted">The message key (optional)</small>
+                </div>
+                <div class="form-group">
+                    <label for="value">Message</label>
+                    <input type="text" class="form-control" id="value" aria-describedby="valueHelp" placeholder="Value">
+                    <small id="valueHelp" class="form-text text-muted">The message value</small>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        <div id="result" class="col overflow-auto" style="border:1px solid #cecece; max-height: 600px;">
+            <p>output window</p>
+        </div>
+    </div>
+</div>
+
+<script src="/js/ui.js"></script>
+</body>
+</html>
